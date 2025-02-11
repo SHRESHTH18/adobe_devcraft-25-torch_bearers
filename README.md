@@ -1,7 +1,7 @@
 # Adobe Devcraft 25 - Team Torch-Bearers
 
 ##  Project Overview  
-This project focuses on **Real-Time Bidding (RTB) optimization** using a **Deep Cross Network (DCNv3)** model and other methods for efficient, interpretable, and high-performance **Click-Through Rate (CTR) prediction**.
+This project focuses on **Real-Time Bidding (RTB) optimization** using a **Deep Cross Network (DCNv3)** model and other methods for efficient, interpretable, and high-performance **Click-Through Rate (CTR) and Conversion Rate (CVR) prediction**.
 
 The goal is to **maximize clicks and conversions while maintaining budget constraints** in a second-price auction system used in digital advertising.
 
