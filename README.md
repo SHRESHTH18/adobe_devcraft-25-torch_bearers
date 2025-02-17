@@ -56,7 +56,7 @@ The dataset consists of **processed DSP bidding logs**, including bid, impressio
 ✔ **Multi-Label Binarization (MLB)** → Encoded **user profile tags** for better representation.  
 ✔ **One-Hot Encoding (OHE)** → Applied to **low-cardinality categorical features** (e.g., `Adslot Format`, `Ad Exchange`).  
 ✔ **Ordinal Encoding** → Used for **medium-cardinality categorical features** (e.g., `Region`, `City`, `User-Agent`).  
-✔ **Frequency Encoding** → Applied to **high-cardinality categorical features** (e.g., `AdvertiserID`, `Ad Exchange`).  
+✔ Dropping **high-cardinality categorical features** (e.g., `AdvertiserID`, `Ad Exchange`).  
 
 #### **2️⃣ Time-Based Features**  
 ✔ **Extracted Hour of the Day** → Added `"hour"` from the `timestamp` to capture user behavior trends.  
@@ -77,9 +77,9 @@ The dataset consists of **processed DSP bidding logs**, including bid, impressio
 | **Model**   | **Feature Interaction** | **Interpretability** | **Computational Cost** | **Effectiveness** |
 |------------|---------------------|------------------|--------------------|--------------|
 | **XGBoost**  | None | High | Low | Weak |
-| **DeepFM**   | Implicit (DNN) | Low | High | Strong |
+| **ANN**   | Implicit (DNN) | Medium | High |Good|  ( Current Version )
 | **DCNv1/v2** | Weak explicit | Medium | Medium | Good |
-| **DCNv3 (Our Choice)** | **Strong Explicit (LCN+ECN)** | High | Low | **Best** |
+| **DCNv3 (Our Choice)** | **Strong Explicit (LCN+ECN)** | High | Low | **Best** | ( Will be presented in final version )
 
 ### **Why DCNv3?**  
 ✔ **Explicit Feature Interaction Modeling** (LCN for low-order, ECN for high-order).  
